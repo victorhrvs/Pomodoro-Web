@@ -1,0 +1,307 @@
+/*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+Circle of chronometer
+*/
+
+.bg-circle {
+  display:flex;
+  justify-content: center;
+  margin: 8px;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:  #CFD8DC;
+  border-radius: 50%;
+  text-align: center;
+  width: 32vh;
+  height: 32vh;
+  min-height:200px;
+  min-width:200px;
+  padding: 1vh;
+  margin: 1vh;
+  border: 1vh;
+  box-shadow: -6px -6px 20px #ffffff46,
+               6px 6px 20px #3333337c;
+
+}
+
+.internal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  background-image:  -webkit-radial-gradient(45px 45px, circle cover, #DEE5E7, #b6bec2);
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+/**
+  animation-name: animateIn;
+  animation-duration: 3s;
+  background-image: -webkit-radial-gradient(45px 45px, circle cover, #DEE5E7, #b6bec2);
+*/
+  width: 29vh;
+  height: 29vh;
+  min-height:182px;
+  min-width:182px;
+  box-shadow: -6px -6px 15px #ffffff44,
+               6px 6px 15px #3333337c;
+}
+
+#clock_green {
+  font-size: 4em;
+  color: #4CAF50;
+  
+}
+
+#clock_yellow{
+  font-size: 4em;
+  color: #F9A825;
+}
+
+.btn-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:  #CFD8DC;
+  border-radius: 50%;
+  text-align: center;
+  width: 8vh;
+  height: 8vh;
+  min-height:70px;
+  min-width:70px;
+  padding: 1vh;
+  margin: 1vh;
+  border: 1vh;
+  font-size: 1em;
+  color: #4CAF50;
+  
+  box-shadow: -6px -6px 20px #ffffff65,
+               6px 6px 20px #3333337c;
+
+}
+
+
+.btn-circle:hover{
+  background:#CFD8DC;
+  color:#EEE;
+  box-shadow: -6px -6px 20px #ffffff33,
+  6px 6px 20px #33333345;
+}
+
+
+.btn-circle:active{
+  background:#d2dce0;
+  color:#EEE;
+  box-shadow: 6px 6px 15px #ffffff46,
+  -6px -6px 15px #3333337c;
+}
+
+.btn-circle-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:  #CFD8DC;
+  border-radius: 50%;
+  text-align: center;
+  width: 1vh;
+  height: 1vh;
+  min-height:24px;
+  min-width:24px;
+  margin: 2vh;
+  border: 1vh;
+  font-size: 1em;
+  color: #4CAF50;
+  box-shadow: -6px -6px 20px #ffffff65,
+               6px 6px 20px #3333337c;
+}
+
+.btn-circle-small:hover {
+  box-shadow: -6px -6px 20px #ffffff33,
+  6px 6px 20px #33333345;
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    color: #00000000;
+  }
+  50% {
+    opacity: 1;
+    transform:  translateY(0px) rotateY(180deg);
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+    color: #00000000;
+    fill-opacity: inherit;
+  }
+  
+  75% {
+    opacity: 1;
+    color: #00000000;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ul{
+  padding-left: 0px;
+}
+
+.bg-circle {
+  display:flex;
+  justify-content: center;
+  margin: 32px;
+}
+
+.conj-barra {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.barra {
+  background:  #CFD8DC;
+  color: #707070;
+  font-family: 'Segoe UI';
+  display:flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  min-width: 400px;
+  min-height: 65px;
+  margin: 1vh 0vw 1vh 0vw;
+  padding: 0px;
+  font-size: 1.2em;
+  box-shadow: -6px -6px 20px #ffffff65,
+               6px 6px 20px #3333337c;
+  
+}
+
+
+
+.barra:active {
+  box-shadow: 6px 6px 20px #ffffff46,
+              -6px -6px 20px #33333345;
+
+}
+
+.text-barra {  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  
+  text-align: left;
+  
+  min-width: 270px;
+  min-height: 44px;
+  padding-top: 22px;
+  padding-left: 17px;
+  padding-right: 10px;
+  padding-bottom: 22px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  
+}
+
+.tempo {
+  text-align: center;
+  padding: 0 20px 0 20px;
+  min-width: 100px
+}
+
+.btn-barra{
+  display: flex;
+  align-items: center;
+  min-width: 32px;
+  min-height: 64px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 0px 10px #ffffff65;
+}
+
+.doacao{
+  min-width: 338px;
+}
+.btn-doacoes{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  min-width: 64px;
+  min-height: 64px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 0px 10px #ffffff65;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+
+:root {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+  margin: 0;
+  background: #B0BEC5;
+  
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+
+body {
+  font-family:
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+}

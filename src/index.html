@@ -34,7 +34,7 @@
         <li class="barra">
             <div class="text-barra">Cronômetro da Tarefa:</div>
             <div class="tempo">
-                <input type="time"  min="00:00:00" max="23:59:59" value="00:25:00">
+                <input type="text" value="25:00" inputmode="numeric" pattern="^(([0-5][0-9]:?[0-5][0-9]+$))" >
             </div>
             <div class="btn-barra">
                 <img src="./res/img/arrow.svg" alt="arrow">              
@@ -43,7 +43,8 @@
         <li class="barra">
             <div class="text-barra">Cronômetro de descanso:</div>
             <div class="tempo">
-                <input type="time" min="00:00:00" max="23:59:59" value="00:05:00">
+                <!-- parttern regex que aceita o formato mm:ss ou m:ss-->
+                <input type="text" value="5:00" inputmode="numeric" pattern="^(([0-5][0-9]:?[0-5][0-9]+$))|(([0-9]:?[0-5][0-9]+$))">
             </div>
             <div class="btn-barra">
                 <img src="./res/img/arrow.svg" alt="arrow">

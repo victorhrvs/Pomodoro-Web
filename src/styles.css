@@ -234,6 +234,7 @@ Circle of chronometer
 
 .tempo {
   text-align: center;
+  align-items: center;
   padding: 0 0px 0 0px;
   min-width: 100px
 }
@@ -315,23 +316,17 @@ body {
 }
 
 
-input[type=time]::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
-input[type="date"]::-webkit-clear-button {
-  display: none;
-}
 
 
-input[type=time] {
+input[type=text] {
+  text-align: right;
   background-color: #CFD8DC;
-  padding: 12px  0px  12px  0px;
+  padding: 12px  10px  12px  10px;
   border-radius: 5px;
   border-color: #cfd8dc00;
   font-size: 1.2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 105px;
+  max-width: 72px;
   color: #707070;
 }
 

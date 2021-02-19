@@ -2,7 +2,7 @@
 var timer = new easytimer.Timer();
 var clock_selected = 'clock_green';
 
-timer.start({countdown: true, startValues: {seconds: 30}});
+timer.start({countdown: true, startValues: {seconds: 90}});
 
 timer.addEventListener('secondsUpdated', function (e) {
     let clock = document.getElementById(clock_selected)

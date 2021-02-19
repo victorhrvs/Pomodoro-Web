@@ -197,6 +197,8 @@ Circle of chronometer
   border-radius: 5px;
   min-width: 400px;
   min-height: 65px;
+  max-width: 400px;
+  min-height: 65px;
   margin: 1vh 0vw 1vh 0vw;
   padding: 0px;
   font-size: 1.2em;
@@ -219,11 +221,11 @@ Circle of chronometer
   
   text-align: left;
   
-  min-width: 270px;
+  min-width: 268px;
   min-height: 44px;
   padding-top: 22px;
-  padding-left: 17px;
-  padding-right: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
   padding-bottom: 22px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -232,9 +234,10 @@ Circle of chronometer
 
 .tempo {
   text-align: center;
-  padding: 0 20px 0 20px;
+  padding: 0 0px 0 0px;
   min-width: 100px
 }
+
 
 .btn-barra{
   display: flex;
@@ -310,3 +313,25 @@ body {
 		'Apple Color Emoji',
 		'Segoe UI Emoji';
 }
+
+
+input[type=time]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+
+input[type=time] {
+  background-color: #CFD8DC;
+  padding: 12px  0px  12px  0px;
+  border-radius: 5px;
+  border-color: #cfd8dc00;
+  font-size: 1.2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 105px;
+  color: #707070;
+}
+

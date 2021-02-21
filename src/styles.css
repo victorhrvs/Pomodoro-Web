@@ -209,11 +209,7 @@ Circle of chronometer
 
 
 
-.barra:active {
-  box-shadow: 6px 6px 20px #ffffff46,
-              -6px -6px 20px #33333345;
 
-}
 
 .text-barra {  
   -webkit-user-select: none;
@@ -250,9 +246,21 @@ Circle of chronometer
   box-shadow: 0px 0px 10px #ffffff65;
 }
 
+.btn-barra:active {
+  box-shadow: 6px 6px 20px #ffffff46,
+              -6px -6px 20px #33333345;
+
+}
+
 .doacao{
   min-width: 338px;
 }
+
+#doacao:active{
+  box-shadow: 6px 6px 20px #ffffff46,
+             -6px -6px 20px #33333345;
+}
+
 .btn-doacoes{
   display: flex;
   justify-content:center;

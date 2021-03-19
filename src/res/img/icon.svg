@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="164.5" height="164.5" viewBox="0 0 164.5 164.5">
+  <defs>
+    <filter id="Elipse_4" x="19.5" y="19.5" width="145" height="145" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-color="#78909c" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.558" y1="0.621" x2="-1.253" y2="-1.529" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4caf50"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <filter id="Elipse_9" x="0" y="0" width="160" height="160" filterUnits="userSpaceOnUse">
+      <feOffset dx="-6" dy="-6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-color="#eceff1" flood-opacity="0.902"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="0.529" x2="-0.647" y2="-0.924" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#cfd8dc"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <filter id="Elipse_3" x="1" y="1" width="158" height="158" filterUnits="userSpaceOnUse">
+      <feOffset dx="-6" dy="-6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-3"/>
+      <feFlood flood-color="#4caf50" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_14" data-name="Grupo 14" transform="translate(-40 -26)">
+    <g transform="matrix(1, 0, 0, 1, 40, 26)" filter="url(#Elipse_4)">
+      <circle id="Elipse_4-2" data-name="Elipse 4" cx="50" cy="50" r="50" transform="translate(36 36)" fill="#cfd8dc"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 40, 26)" filter="url(#Elipse_9)">
+      <circle id="Elipse_9-2" data-name="Elipse 9" cx="50" cy="50" r="50" transform="translate(36 36)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 40, 26)" filter="url(#Elipse_3)">
+      <circle id="Elipse_3-2" data-name="Elipse 3" cx="49" cy="49" r="49" transform="translate(37 37)" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+  <text id="_25" data-name="25" transform="translate(60 103)" fill="#00c300" font-size="47" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="0" y="0">25</tspan></text>
+</svg>

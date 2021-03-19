@@ -4,7 +4,7 @@
 let timer_green = new easytimer.Timer();
 let timer_yellow = new easytimer.Timer();
 let green_init = {minutes: 25, seconds: 0}
-let yellow_init = {minutes: 0, seconds: 10}
+let yellow_init = {minutes: 5, seconds: 0}
 var clock_selected = 'clock_green';
 init();
 

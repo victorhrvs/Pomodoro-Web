@@ -11,9 +11,9 @@ init();
 function init() {
     // Inicia o relogio verde com o valor de green_init
     let green_el = document.getElementById('clock_green');
-    timer_green.start({countdown: true, startValues: {minutes: green_init.minutes, seconds: green_init.seconds}});
+    timer_green.start({countdown: true, startValues: {minutes: green_init.minutes, seconds: green_init.seconds}, target : {seconds: 0}} );
     green_el.innerHTML = timer_green.getTimeValues().toString(['minutes', 'seconds']);
-    timer_green.stop();
+    timer_green.pause();
 }
 
 timer_green.addEventListener('secondTenthsUpdated', function (e) {
@@ -53,7 +53,7 @@ function rewind() {
         timer_green.start({countdown: true, startValues: {minutes: green_init.minutes, seconds: green_init.seconds}, target : {seconds: 0}} );
 
         green_el.innerHTML = timer_green.getTimeValues().toString(['minutes', 'seconds']);
-        timer_green.stop();
+        timer_green.pause();
     }
 
     if( clock_selected === "clock_yellow") {
@@ -62,7 +62,7 @@ function rewind() {
         timer_yellow.start({countdown: true, startValues: {minutes: yellow_init.minutes, seconds: yellow_init.seconds}, target : {seconds: 0}} );
 
         yellow_el.innerHTML = timer_yellow.getTimeValues().toString(['minutes', 'seconds']);
-        timer_yellow.stop();
+        timer_yellow.pause();
     }
     audio_stop();
 }
@@ -83,12 +83,11 @@ function audio_stop() {
 }
 
 function play() {
-    console.log(clock_selected === 'clock_yellow');
     if( clock_selected === 'clock_green'){
-        timer_green.start({countdown: true, startValues: {minutes: green_init.minutes, seconds: green_init.seconds}});
+        timer_green.start();
     }
     if( clock_selected === 'clock_yellow'){
-        timer_yellow.start({countdown: true, startValues: {minutes: yellow_init.minutes, seconds: yellow_init.seconds}});
+        timer_yellow.start();
     }
     audio_stop();
 }

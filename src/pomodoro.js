@@ -65,6 +65,8 @@ function rewind() {
         timer_yellow.pause();
     }
     audio_stop();
+    play_active();
+    pause_hide();
 }
 
 function audio() {
@@ -78,8 +80,8 @@ function audio() {
 function audio_stop() {
     var sound = document.getElementById("audio");
     sound.muted = true;
-    sound.rewind();
-    sound.stop();
+    sound.pause();
+
 }
 
 function play() {
@@ -90,7 +92,40 @@ function play() {
         timer_yellow.start();
     }
     audio_stop();
+    play_hide();
+    pause_active();
 }
+
+
+function play_active() {
+    let btn_play = document.getElementById('btn-play');
+    btn_play.style.display = "flex";
+}
+function play_hide() {
+    let btn_play = document.getElementById('btn-play');
+    btn_play.style.display = "none";
+}
+
+function pause() {
+    if( clock_selected === 'clock_green'){
+        timer_green.pause();
+    }
+    if( clock_selected === 'clock_yellow'){
+        timer_yellow.pause();
+    }
+    audio_stop();
+    play_active();
+    pause_hide();
+}
+function pause_active() {
+    let btn_play = document.getElementById('btn-pause');
+    btn_play.style.display = "flex";
+}
+function pause_hide() {
+    let btn_play = document.getElementById('btn-pause');
+    btn_play.style.display = "none";
+}
+
 
 function next() {
     let green_el = document.getElementById('clock_green');
@@ -152,6 +187,9 @@ if(bnt_rewind_el){
 
 let bnt_play_el = document.querySelector('#btn-play');
 bnt_play_el.addEventListener('click', play);
+
+let bnt_pause_el = document.querySelector('#btn-pause');
+bnt_pause_el.addEventListener('click', pause);
 
 let bnt_next_el = document.querySelector('#btn-next');
 bnt_next_el.addEventListener('click', next);

@@ -31,7 +31,17 @@ timer_yellow.addEventListener('secondTenthsUpdated', function (e) {
     console.log(timer_yellow.getTimeValues().toString(['minutes', 'seconds']) );
     clock.innerHTML = clock_text;
 });
- 
+
+
+timer_green.addEventListener('targetAchieved', function (e) {
+    audio();
+    //blink();
+});
+
+timer_yellow.addEventListener('targetAchieved', function (e) {
+    audio();
+    //blink();
+});
 
 function rewind() {
     let green_el = document.getElementById('clock_green');
@@ -40,7 +50,7 @@ function rewind() {
     if( clock_selected === "clock_green") {
         //Inicia relogio
         timer_green.stop();
-        timer_green.start({countdown: true, startValues: {minutes: green_init.minutes, seconds: green_init.seconds}});
+        timer_green.start({countdown: true, startValues: {minutes: green_init.minutes, seconds: green_init.seconds}, target : {seconds: 0}} );
 
         green_el.innerHTML = timer_green.getTimeValues().toString(['minutes', 'seconds']);
         timer_green.stop();
@@ -49,11 +59,12 @@ function rewind() {
     if( clock_selected === "clock_yellow") {
         //Inicia relogio
         timer_yellow.stop();
-        timer_yellow.start({countdown: true, startValues: {minutes: yellow_init.minutes, seconds: yellow_init.seconds}});
+        timer_yellow.start({countdown: true, startValues: {minutes: yellow_init.minutes, seconds: yellow_init.seconds}, target : {seconds: 0}} );
 
         yellow_el.innerHTML = timer_yellow.getTimeValues().toString(['minutes', 'seconds']);
         timer_yellow.stop();
     }
+    audio_stop();
 }
 
 function audio() {
@@ -64,6 +75,13 @@ function audio() {
     sound.play();
 }
 
+function audio_stop() {
+    var sound = document.getElementById("audio");
+    sound.muted = true;
+    sound.rewind();
+    sound.stop();
+}
+
 function play() {
     console.log(clock_selected === 'clock_yellow');
     if( clock_selected === 'clock_green'){
@@ -72,7 +90,7 @@ function play() {
     if( clock_selected === 'clock_yellow'){
         timer_yellow.start({countdown: true, startValues: {minutes: yellow_init.minutes, seconds: yellow_init.seconds}});
     }
-    
+    audio_stop();
 }
 
 function next() {

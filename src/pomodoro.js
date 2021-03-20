@@ -20,7 +20,7 @@ timer_green.addEventListener('secondTenthsUpdated', function (e) {
     let clock = document.getElementById(clock_selected);
     let clock_text = timer_green.getTimeValues().toString(['minutes', 'seconds']);
     //clock_green.innerHTML(timer_green.getTimeValues().toString());
-    console.log(timer_green.getTimeValues().toString(['minutes', 'seconds']) );
+    //console.log(timer_green.getTimeValues().toString(['minutes', 'seconds']) );
     clock.innerHTML = clock_text;
 });
 
@@ -28,7 +28,7 @@ timer_yellow.addEventListener('secondTenthsUpdated', function (e) {
     let clock = document.getElementById(clock_selected);
     let clock_text = timer_yellow.getTimeValues().toString(['minutes', 'seconds']);
     //clock_green.innerHTML(timer_green.getTimeValues().toString());
-    console.log(timer_yellow.getTimeValues().toString(['minutes', 'seconds']) );
+    //console.log(timer_yellow.getTimeValues().toString(['minutes', 'seconds']) );
     clock.innerHTML = clock_text;
 });
 
@@ -165,6 +165,29 @@ function next() {
     rewind();
 }
 
+function set_time() {
+    let input_clock_green = document.getElementById('input_clock_green');
+    let input_clock_yellow = document.getElementById('input_clock_yellow');
+
+    const regex = /([0-5]?[0-9]?):([0-5]?[0-9])/;
+    let result;
+    //Green
+    if ((result = regex.exec(input_clock_green.value)) !== null) {
+        if( result.length === 3){
+            green_init = {minutes: Number(result[1]), seconds: Number(result[2])};
+        }
+    }
+    //Yellow
+    if ((result = regex.exec(input_clock_yellow.value)) !== null) {
+        if( result.length === 3){
+            yellow_init = {minutes: Number(result[1]), seconds: Number(result[2])};
+        }
+    }
+
+    rewind();
+}
+
+
 function hide_menu() {
     let i;
     let barra_el = document.querySelectorAll('.barra');
@@ -183,14 +206,6 @@ function hide_menu() {
 
 }
 
-function setTime() {
-    let value_green = document.getElementById('input_clock_green');
-    let value_yellow = document.getElementById('input_clock_yellow');
-    
-    console.log("Green " + value_green.value);
-    console.log("Yellow " + value_yellow.value);
-    console.log('set Time');
-}
 
 //document.getElementById('btn-play').click(function () {
 //    console.log(timer_green.getTimeValues().toString());
@@ -209,12 +224,6 @@ bnt_pause_el.addEventListener('click', pause);
 
 let bnt_next_el = document.querySelector('#btn-next');
 bnt_next_el.addEventListener('click', next);
-
-let i;
-let bnt_set_clock_time_el = document.getElementsByClassName('btn-barra');
-for (i = 0; i < bnt_set_clock_time_el.length; i++) {
-    bnt_set_clock_time_el[i].addEventListener('click', setTime);
-}
 
 let bnt_navigation_bar_el = document.getElementById('navigation_bar');
 bnt_navigation_bar_el.addEventListener('click', hide_menu);

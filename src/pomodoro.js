@@ -25,8 +25,8 @@ timer_green.addEventListener('secondTenthsUpdated', function (e) {
 });
 
 timer_yellow.addEventListener('secondTenthsUpdated', function (e) {
-    let clock = document.getElementById(clock_selected)
-    let clock_text = timer_yellow.getTimeValues().toString(['minutes', 'seconds'])
+    let clock = document.getElementById(clock_selected);
+    let clock_text = timer_yellow.getTimeValues().toString(['minutes', 'seconds']);
     //clock_green.innerHTML(timer_green.getTimeValues().toString());
     console.log(timer_yellow.getTimeValues().toString(['minutes', 'seconds']) );
     clock.innerHTML = clock_text;
@@ -34,14 +34,30 @@ timer_yellow.addEventListener('secondTenthsUpdated', function (e) {
 
 
 timer_green.addEventListener('targetAchieved', function (e) {
+    let clock = document.getElementById("clock_green");
     audio();
-    //blink();
+    blink(clock);
 });
 
 timer_yellow.addEventListener('targetAchieved', function (e) {
+    let clock = document.getElementById("clock_yellow");
     audio();
-    //blink();
+    blink(clock);
 });
+
+async function blink( clock ) {
+    let btn_play = document.getElementById('btn-pause');
+    while( clock_selected === clock.id && clock.textContent === "00:00" && btn_play.style.display === "flex") {
+        clock.style.visibility = 'hidden';
+        await sleep(128);
+        clock.style.visibility = '';
+        await sleep(128);
+    }
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 function rewind() {
     let green_el = document.getElementById('clock_green');

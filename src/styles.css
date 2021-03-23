@@ -44,7 +44,7 @@ Circle of chronometer
 }
 
 #btn-pause {
-  display: none;
+  display: flex;
 }
 
 
